@@ -1,0 +1,48 @@
+$ANIMATION_DURATION: 1s;
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shrinkCurrentImg {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: translateX(0.6);
+  }
+}
+
+.shrink {
+  transform: scale(0.95);
+}
+
+.slideInFromRight {
+  animation: slideInFromRight $ANIMATION_DURATION forwards;
+}
+
+.slideInFromLeft {
+  animation: slideInFromLeft $ANIMATION_DURATION forwards;
+}
+
+.slideOutToRight {
+  animation: shrinkCurrentImg $ANIMATION_DURATION forwards;
+}
+
+.slideOutToLeft {
+  animation: shrinkCurrentImg $ANIMATION_DURATION forwards;
+}
